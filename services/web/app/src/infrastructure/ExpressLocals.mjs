@@ -302,23 +302,20 @@ export default async function (webRouter, privateApiRouter, publicApiRouter) {
   })
 
   webRouter.use(function (req, res, next) {
-    // TODO
-    if (Settings.overleaf != null) {
-      res.locals.overallThemes = [
-        {
-          name: 'Dark',
-          val: '',
-        },
-        {
-          name: 'Light',
-          val: 'light-',
-        },
-        {
-          name: 'System',
-          val: 'system',
-        },
-      ]
-    }
+    res.locals.overallThemes = [
+      {
+        name: 'Dark',
+        val: '',
+      },
+      {
+        name: 'Light',
+        val: 'light-',
+      },
+      {
+        name: 'System',
+        val: 'system',
+      },
+    ]
     next()
   })
 
